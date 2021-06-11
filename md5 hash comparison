@@ -2,13 +2,15 @@ while True:
   import hashlib
   
   hasher1 = hashlib.md5()
-  afile1 = open('img1.png', 'rb') #can put your own file name instead of img1.png
+  file1 = input('File1: ') #ex. img1.png
+  afile1 = open('file1', 'rb')
   buf1 = afile1.read()
   a = hasher1.update(buf1)
   print('md5 hash of file 1: ',str(hasher1.hexdigest()))
   
   hasher2 = hashlib.md5()
-  afile2 = open('img2.png', 'rb')
+  fafi2 = input('File2: ') #ex. img2.png
+  afile2 = open('file2', 'rb')
   buf2 = afile2.read()
   b = hasher2.update(buf2)
   print('md5 hash of file 2: ',str(hasher2.hexdigest()))
@@ -17,6 +19,6 @@ while True:
     print('Same file')
     break
     
-  else:
+  else str(a) != str(b):
     print('A different file')
 
